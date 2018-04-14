@@ -1,0 +1,62 @@
+﻿<Window x:Class="MultiEdit.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MultiEdit"
+        mc:Ignorable="d"
+        Title="+371 29 47 91 90 (Вася) // Y2018" Height="566.784" Width="600">
+
+    <Window.Resources>
+        <XmlDataProvider x:Key="BookData" Source="Resources\LN1.xaml" XPath="ResourceDictionary"/>
+    </Window.Resources>
+    <Grid>
+
+        <DockPanel>
+            <ToolBarPanel Height="40" VerticalAlignment="Top">
+                <ToolBar Height="40">
+                    <Button Content=" Load ResourceDictionary " Name="btnLoad" Click="btnLoad_Click"></Button>
+                    <Button Content=" Save ResourceDictionary " Name="btnSave" Click="btnSave_Click" Margin="0,0,0,7" VerticalAlignment="Bottom"></Button>
+                </ToolBar>
+            </ToolBarPanel>
+        </DockPanel>
+
+        <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition MinWidth="100"></ColumnDefinition>
+            <ColumnDefinition MinWidth="5" Width="Auto"></ColumnDefinition>
+            <ColumnDefinition MinWidth="200"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <!-- #1 -->
+        <DockPanel HorizontalAlignment="Stretch" Grid.Column="0" LastChildFill="False" VerticalAlignment="Stretch" Margin="0,40,0,0" Name="dckLeft">
+                <ListBox Name="lstKeys" Margin="0" ItemsSource="{Binding Path=EditorDataModel.Items, Mode=TwoWay}" SelectedValuePath="KeyName" HorizontalAlignment="Stretch" DisplayMemberPath="KeyName" SelectionChanged="lstKeys_SelectionChanged" Width="{Binding ElementName=dckLeft, Path=ActualWidth}" Height="{Binding ElementName=dckLeft, Path=ActualHeight}" VerticalAlignment="Stretch" />
+        </DockPanel>
+
+        <!-- #2 -->
+        <GridSplitter HorizontalAlignment="Center" BorderThickness="1" BorderBrush="LightGray" Grid.Column="1" VerticalAlignment="Stretch" Width="4" ShowsPreview="False" Background="DarkGray" Margin="0,40,1,0"/>
+
+        <!-- #3 -->
+        <DockPanel HorizontalAlignment="Stretch" Grid.Column="2" LastChildFill="False" VerticalAlignment="Stretch" Margin="0,40,0,0" Name="dckRight">
+
+            <StackPanel Name="stcEditor" Margin="0" Visibility="Collapsed" Width="{Binding ElementName=dckRight, Path=ActualWidth}">
+                <WrapPanel Background="AliceBlue">
+                        <Button Content=" Cancel changes " Name="btnCancel" Margin="5" Click="btnCancel_Click"></Button>
+                </WrapPanel>
+
+                <Label Content="LV"/>
+                    <TextBox Text="{Binding Path=EditorDataModel.CurrentItem.Value1, Mode=TwoWay}" Height="80" TextWrapping="Wrap" AcceptsTab="True" VerticalScrollBarVisibility="Visible"/>
+
+                <Label Content="RU"/>
+                    <TextBox Text="{Binding Path=EditorDataModel.CurrentItem.Value2, Mode=TwoWay}" Height="80" TextWrapping="Wrap" AcceptsTab="True" VerticalScrollBarVisibility="Visible"/>
+
+                <Label Content="EN"/>
+                    <TextBox Text="{Binding Path=EditorDataModel.CurrentItem.Value3, Mode=TwoWay}" Height="80" TextWrapping="Wrap" AcceptsTab="True" VerticalScrollBarVisibility="Visible"/>
+
+                <Label Content="DE"/>
+                    <TextBox Text="{Binding Path=EditorDataModel.CurrentItem.Value4, Mode=TwoWay}" Height="80" TextWrapping="Wrap" AcceptsTab="True" VerticalScrollBarVisibility="Visible"/>
+            </StackPanel>
+        </DockPanel>
+        </Grid>
+    </Grid>
+</Window>
