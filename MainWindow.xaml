@@ -15,7 +15,12 @@
         <DockPanel>
             <ToolBarPanel Height="40" VerticalAlignment="Top">
                 <ToolBar Height="40">
-                    <Button Content=" Load ResourceDictionary " Name="btnLoad" Click="btnLoad_Click"></Button>
+                    <Button Margin="5" Name="btnLoadResources" Click="btnLoad_Click" HorizontalAlignment="Left" ToolTip="Загрузить ресурсные файлы для всех языков">
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="/Resources/Bitmaps/open.png"/>
+                            <TextBlock VerticalAlignment="Center">Load ResourceDictionary</TextBlock>
+                        </StackPanel>
+                    </Button>
                     <Button Content=" Save ResourceDictionary " Name="btnSave" Click="btnSave_Click" Margin="0,0,0,7" VerticalAlignment="Bottom"></Button>
                 </ToolBar>
             </ToolBarPanel>
@@ -41,8 +46,13 @@
 
             <StackPanel Name="stcEditor" Margin="0" Visibility="Collapsed" Width="{Binding ElementName=dckRight, Path=ActualWidth}">
                 <WrapPanel Background="AliceBlue">
-                        <Button Content=" Cancel changes " Name="btnCancel" Margin="5" Click="btnCancel_Click"></Button>
-                </WrapPanel>
+                        <Button Margin="5" x:Name="btnCancel" Click="btnCancel_Click" HorizontalAlignment="Left" ToolTip="Отменить внесённые изменения для всех языков по данной записи">
+                            <StackPanel Orientation="Horizontal">
+                                <Image Source="/Resources/Bitmaps/cancel.png" Margin="5" Width="24"/>
+                                <TextBlock Margin="5" VerticalAlignment="Center">Cancel changes</TextBlock>
+                            </StackPanel>
+                        </Button>
+                    </WrapPanel>
 
                 <Label Content="LV"/>
                     <TextBox Text="{Binding Path=EditorDataModel.CurrentItem.Value1, Mode=TwoWay}" Height="80" TextWrapping="Wrap" AcceptsTab="True" VerticalScrollBarVisibility="Visible"/>
