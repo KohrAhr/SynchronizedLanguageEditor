@@ -4,6 +4,14 @@
              xmlns:local="clr-namespace:MultiEdit"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <!-- Last resources - is default resource (language) -->
+                <ResourceDictionary Source="/Resources/StringResources.lv-LV.xaml" />
+                <ResourceDictionary Source="/Resources/StringResources.ru-RU.xaml" />
+                <ResourceDictionary Source="/Resources/StringResources.de-LI.xaml" />
+                <ResourceDictionary Source="/Resources/StringResources.en-US.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
     </Application.Resources>
 </Application>

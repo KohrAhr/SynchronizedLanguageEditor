@@ -22,10 +22,10 @@ namespace MultiEdit
 
         public LanguageFile[] filesForProceed = new LanguageFile[]
         {
-            new LanguageFile { file = @"Resources\ln1.xaml", language = LanguageTypes.Languages.lLV },
-            new LanguageFile { file = @"Resources\ln2.xaml", language = LanguageTypes.Languages.lRU },
-            new LanguageFile { file = @"Resources\ln3.xaml", language = LanguageTypes.Languages.lEN },
-            new LanguageFile { file = @"Resources\ln4.xaml", language = LanguageTypes.Languages.lDE }
+            new LanguageFile { file = @"Resources\StringResources.lv-LV.xaml", language = LanguageTypes.Languages.lLV },
+            new LanguageFile { file = @"Resources\StringResources.ru-RU.xaml", language = LanguageTypes.Languages.lRU },
+            new LanguageFile { file = @"Resources\StringResources.en-US.xaml", language = LanguageTypes.Languages.lEN },
+            new LanguageFile { file = @"Resources\StringResources.de-LI.xaml", language = LanguageTypes.Languages.lDE }
         };
 
         private void btnLoad_Click(object sender, RoutedEventArgs e)

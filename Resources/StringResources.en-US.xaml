@@ -1,0 +1,16 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:system="clr-namespace:System;assembly=mscorlib"
+                    xmlns:local="clr-namespace:MultiEdit.Resources">
+
+    <system:String x:Key="lblLoadResourceDictionary">Load "ResourceDictionary"</system:String>
+    <system:String x:Key="lblLoadResourceDictionaryHint">Load resource files for all languages</system:String>
+    <system:String x:Key="lblSaveResourceDictionary">Save "ResourceDictionary"</system:String>
+    <system:String x:Key="lblCancelChanges">Cancel changes</system:String>
+    <system:String x:Key="lblCancelChangesHint">Undo changes for all languages by this entry</system:String>
+    <system:String x:Key="lblLV">LV (Latvian)</system:String>
+    <system:String x:Key="lblRU">RU (Russian)</system:String>
+    <system:String x:Key="lblEN">EN (English)</system:String>
+    <system:String x:Key="lblDE">DE (German)</system:String>
+
+</ResourceDictionary>

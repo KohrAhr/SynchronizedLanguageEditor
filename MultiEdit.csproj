@@ -79,22 +79,22 @@
     <Resource Include="Resources\Bitmaps\cancel.png" />
     <Resource Include="Resources\Bitmaps\ok.png" />
     <Resource Include="Resources\Bitmaps\open.png" />
-    <Content Include="Resources\LN1.xaml">
+    <Content Include="Resources\StringResources.lv-LV.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\LN2.xaml">
+    <Content Include="Resources\StringResources.ru-RU.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\LN3.xaml">
+    <Content Include="Resources\StringResources.en-US.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\LN4.xaml">
+    <Content Include="Resources\StringResources.de-LI.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>

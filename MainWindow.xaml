@@ -5,23 +5,22 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MultiEdit"
         mc:Ignorable="d"
-        Title="+371 29 47 91 90 (Вася) // Y2018" Height="566.784" Width="600">
+        Title="+371 29 47 91 90 (Вася) // Y2018" Height="566" Width="600">
 
     <Window.Resources>
-        <XmlDataProvider x:Key="BookData" Source="Resources\LN1.xaml" XPath="ResourceDictionary"/>
     </Window.Resources>
-    <Grid>
 
+    <Grid>
         <DockPanel>
             <ToolBarPanel Height="40" VerticalAlignment="Top">
                 <ToolBar Height="40">
-                    <Button Margin="5" Name="btnLoadResources" Click="btnLoad_Click" HorizontalAlignment="Left" ToolTip="Загрузить ресурсные файлы для всех языков">
+                    <Button Margin="5" Name="btnLoadResources" Click="btnLoad_Click" HorizontalAlignment="Left" ToolTip="{DynamicResource lblLoadResourceDictionaryHint}">
                         <StackPanel Orientation="Horizontal">
                             <Image Source="/Resources/Bitmaps/open.png"/>
-                            <TextBlock VerticalAlignment="Center">Load ResourceDictionary</TextBlock>
+                            <TextBlock VerticalAlignment="Center" Text="{DynamicResource lblLoadResourceDictionary}" />
                         </StackPanel>
                     </Button>
-                    <Button Content=" Save ResourceDictionary " Name="btnSave" Click="btnSave_Click" Margin="0,0,0,7" VerticalAlignment="Bottom"></Button>
+                    <Button Content="{DynamicResource lblSaveResourceDictionary}" Name="btnSave" Click="btnSave_Click" Margin="0,0,0,7" VerticalAlignment="Bottom"></Button>
                 </ToolBar>
             </ToolBarPanel>
         </DockPanel>
@@ -46,24 +45,24 @@
 
             <StackPanel Name="stcEditor" Margin="0" Visibility="Collapsed" Width="{Binding ElementName=dckRight, Path=ActualWidth}">
                 <WrapPanel Background="AliceBlue">
-                        <Button Margin="5" x:Name="btnCancel" Click="btnCancel_Click" HorizontalAlignment="Left" ToolTip="Отменить внесённые изменения для всех языков по данной записи">
+                        <Button Margin="5" x:Name="btnCancel" Click="btnCancel_Click" HorizontalAlignment="Left" ToolTip="{DynamicResource lblCancelChangesHint}">
                             <StackPanel Orientation="Horizontal">
                                 <Image Source="/Resources/Bitmaps/cancel.png" Margin="5" Width="24"/>
-                                <TextBlock Margin="5" VerticalAlignment="Center">Cancel changes</TextBlock>
+                                <TextBlock Margin="5" VerticalAlignment="Center" Text="{DynamicResource lblCancelChanges}" />
                             </StackPanel>
                         </Button>
                     </WrapPanel>
 
-                <Label Content="LV"/>
+                    <Label Content="{DynamicResource lblLV}"/>
                     <TextBox Text="{Binding Path=EditorDataModel.CurrentItem.Value1, Mode=TwoWay}" Height="80" TextWrapping="Wrap" AcceptsTab="True" VerticalScrollBarVisibility="Visible"/>
 
-                <Label Content="RU"/>
+                    <Label Content="{DynamicResource lblRU}"/>
                     <TextBox Text="{Binding Path=EditorDataModel.CurrentItem.Value2, Mode=TwoWay}" Height="80" TextWrapping="Wrap" AcceptsTab="True" VerticalScrollBarVisibility="Visible"/>
 
-                <Label Content="EN"/>
+                    <Label Content="{DynamicResource lblEN}"/>
                     <TextBox Text="{Binding Path=EditorDataModel.CurrentItem.Value3, Mode=TwoWay}" Height="80" TextWrapping="Wrap" AcceptsTab="True" VerticalScrollBarVisibility="Visible"/>
 
-                <Label Content="DE"/>
+                    <Label Content="{DynamicResource lblDE}"/>
                     <TextBox Text="{Binding Path=EditorDataModel.CurrentItem.Value4, Mode=TwoWay}" Height="80" TextWrapping="Wrap" AcceptsTab="True" VerticalScrollBarVisibility="Visible"/>
             </StackPanel>
         </DockPanel>
