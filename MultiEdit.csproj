@@ -79,6 +79,7 @@
     <Resource Include="Resources\Bitmaps\cancel.png" />
     <Resource Include="Resources\Bitmaps\ok.png" />
     <Resource Include="Resources\Bitmaps\open.png" />
+    <Resource Include="Resources\Bitmaps\save.png" />
     <Content Include="Resources\StringResources.lv-LV.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

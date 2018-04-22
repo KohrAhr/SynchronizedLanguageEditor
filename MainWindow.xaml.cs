@@ -44,6 +44,7 @@ namespace MultiEdit
         /// <summary>
         ///     Instances of editable ResourceDictionary
         ///     This is place where I keep all translations
+        ///     <para>NOTE: The order of elements in a dictionary is non-deterministic. The notion of order simply is not defined for hashtables. So don't rely on enumerating in the same order as elements were added to the dictionary. That's not guaranteed.</para>
         /// </summary>
         private ResourceDictionary[] ResourcesDictionary
         {

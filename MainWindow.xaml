@@ -14,13 +14,18 @@
         <DockPanel>
             <ToolBarPanel Height="40" VerticalAlignment="Top">
                 <ToolBar Height="40">
-                    <Button Margin="5" Name="btnLoadResources" Click="btnLoad_Click" HorizontalAlignment="Left" ToolTip="{DynamicResource lblLoadResourceDictionaryHint}">
+                    <Button Margin="5" Name="btnLoadResources" Click="btnLoad_Click" ToolTip="{DynamicResource lblLoadResourceDictionaryHint}">
                         <StackPanel Orientation="Horizontal">
                             <Image Source="/Resources/Bitmaps/open.png"/>
                             <TextBlock VerticalAlignment="Center" Text="{DynamicResource lblLoadResourceDictionary}" />
                         </StackPanel>
                     </Button>
-                    <Button Content="{DynamicResource lblSaveResourceDictionary}" Name="btnSave" Click="btnSave_Click" Margin="0,0,0,7" VerticalAlignment="Bottom"></Button>
+                    <Button Margin="5" Name="btnSave" Click="btnSave_Click">
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="/Resources/Bitmaps/save.png"/>
+                            <TextBlock VerticalAlignment="Center" Text="{DynamicResource lblSaveResourceDictionary}" />
+                        </StackPanel>
+                    </Button>
                 </ToolBar>
             </ToolBarPanel>
         </DockPanel>

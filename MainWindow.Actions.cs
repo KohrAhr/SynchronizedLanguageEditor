@@ -30,6 +30,11 @@ namespace MultiEdit
 
         private void btnLoad_Click(object sender, RoutedEventArgs e)
         {
+            ActionLoad();
+        }
+
+        private void ActionLoad()
+        { 
             // Read data
             foreach (LanguageFile file in filesForProceed)
             {
@@ -77,6 +82,11 @@ namespace MultiEdit
 
         private void btnSave_Click(object sender, RoutedEventArgs e)
         {
+            ActionSave();
+        }
+
+        private void ActionSave()
+        { 
             bool result;
 
             // надо скопировать данные из EditorDataModel.Items в новый ResourcesDictionary
